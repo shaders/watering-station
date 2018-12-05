@@ -1,0 +1,17 @@
+// since Arduino IDE does not support folders structure
+// and requiring to install libraries in a system is not really portable and automateable
+#include "libs/DHT-sensor/DHT_U.cpp"
+#include "libs/DHT-sensor/DHT.cpp"
+#include "libs/FlowMeter/FlowMeter.cpp"
+#include "libs/GravityPump/GravityPump.cpp"
+#include "libs/GravityRtc/GravityRtc.cpp"
+#include "libs/HttpClient/b64.cpp"
+#include "libs/HttpClient/HttpClient.cpp"
+#include "libs/LiquidCrystal_I2C/LiquidCrystal_I2C.cpp"
+#include "libs/SFE_BMP180/SFE_BMP180.cpp"
+#include "libs/WiFiEsp/WiFiEsp.cpp"
+#include "libs/WiFiEsp/WiFiEspClient.cpp"
+#include "libs/WiFiEsp/WiFiEspServer.cpp"
+#include "libs/WiFiEsp/WiFiEspUdp.cpp"
+#include "libs/WiFiEsp/EspDrv.cpp"
+#include "libs/WiFiEsp/RingBuffer.cpp"
