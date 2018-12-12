@@ -3,6 +3,9 @@
 const char *WIFI_SSID     = ""; // Enter your Wi-Fi name
 const char *WIFI_PASSWORD = "";  // Enter your Wi-Fi password
 
+const char *AUTH_USER     = "arduino";
+const char *AUTH_PASSWORD = "";
+
 // Pin Definitions
 #define WIFI_PIN_RX 10
 #define WIFI_PIN_TX 11
@@ -172,7 +175,7 @@ void MainSensors::sendSensorsData(int waterOnFloor, int highWater, int lowMainWa
 
   int err = http.startRequest("34.229.106.54", 8086, "/write?db=sensors", "POST", NULL);
   http.sendHeader("Content-Type", "text/plain");
-  http.sendBasicAuth("arduino", "P@ssw0rd!$88");
+  http.sendBasicAuth(AUTH_USER, AUTH_PASSWORD);
 
   String body = "sensors,room=DC ";
   String tStr = StringFormatter::formatString(F("temperature=%d,humidity=%d,pressure=%s"), int(temp.temperature), int(humid.relative_humidity), dtostrf(pressure, 3, 1, convBuffer));
